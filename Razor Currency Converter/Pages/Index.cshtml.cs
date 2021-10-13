@@ -15,6 +15,9 @@ namespace Razor_Currency_Converter.Pages
 
         private readonly ILogger<IndexModel> _logger;
 
+        [BindProperty]
+        private string Value { get; set;}
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;

@@ -1,5 +1,5 @@
 ﻿@page
-@model Razor_Currency_Converter.Pages.Shared.CurrencyConverterModel
+@model CurrencyModel
 @{
 }
 
@@ -12,10 +12,11 @@
 
     <form method="post" class="mx-auto" style="width:200px">
         <p class="col-sm-2">
-            <label for="amount">Amount(£)</label>
-            <input type="text" required="true" placeholder="Please enter the amount you want to convert" asp-for="Value">
+            <label>Amount(£)</label>
+            <input type="text" required="true"
+                   placeholder="Please enter the amount you want to convert" asp-for="Value">
         </p>
-     
+
         <p class="col-sm-2">
             <button type="submit" class="btn btn-primary">
                 Submit
@@ -26,4 +27,4 @@
         </p>
 
     </form>
-    </div>
+</div>

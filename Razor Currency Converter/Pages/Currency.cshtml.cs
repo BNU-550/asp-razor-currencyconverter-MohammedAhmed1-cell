@@ -5,19 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Razor_Currency_Converter.Pages.Shared
+namespace Razor_Currency_Converter.Pages
 {
-    public class CurrencyConverterModel : PageModel
+    public class CurrencyModel : PageModel
     {
         [BindProperty]
-        public double Amount { get; set; }
+        public string Value { get; set; }
+
         public void OnGet()
         {
-        }
-
-        public void OnPost()
-        {
-
         }
     }
 }
