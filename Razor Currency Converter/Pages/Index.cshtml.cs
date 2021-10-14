@@ -28,12 +28,12 @@ namespace Razor_Currency_Converter.Pages
         {
             if(string.IsNullOrWhiteSpace(FullName))
             {
-                ViewData["Message"] = "Name is missing!";
+                ViewData["Message"] = "!";
                 FullName = "Anonymous";
             }
             else
             {
-                ViewData["Message"] = "Name is registered!";
+                ViewData["Message"] = "Currency has been converted!";
             }
         }
     }
