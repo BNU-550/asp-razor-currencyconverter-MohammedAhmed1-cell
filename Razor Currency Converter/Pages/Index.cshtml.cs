@@ -1,18 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Razor_Currency_Converter.Pages
+namespace RazorCurrencyConverter.Pages
 {
     public class IndexModel : PageModel
     {
+        public const string Author = "Hakeel Khan";
+
         [BindProperty]
         public string FullName { get; set; }
 
-        public readonly ILogger<IndexModel> _logger;
-
-        [BindProperty]
-        public string Value { get; set;}
+        private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -21,19 +24,19 @@ namespace Razor_Currency_Converter.Pages
 
         public void OnGet()
         {
-            FullName = "Mohammed";
+            FullName = "Mohammed Ahmed";
         }
 
         public void OnPost()
         {
-            if(string.IsNullOrWhiteSpace(FullName))
+            if (String.IsNullOrWhiteSpace(FullName))
             {
-                ViewData["Message"] = "!";
+                ViewData["No Name"] = "You have not entered a name!";
                 FullName = "Anonymous";
             }
             else
             {
-                ViewData["Message"] = "Currency has been converted!";
+                ViewData["Message"] = "Name is Registered";
             }
         }
     }
